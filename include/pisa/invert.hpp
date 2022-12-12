@@ -74,5 +74,8 @@ namespace pisa { namespace invert {
     /// Creates an inverted index (simple, uncompressed binary format) from a forward index.
     void invert_forward_index(
         std::string const& input_basename, std::string const& output_basename, InvertParams params);
+    
+    /// Merge batches of inverted indices. 
+    void merge_batches(std::string const& output_basename, uint32_t batch_count, uint32_t term_count);
 
 }}  // namespace pisa::invert
